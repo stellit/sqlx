@@ -75,6 +75,11 @@ pub extern crate sqlx_macros;
 #[doc(hidden)]
 pub use sqlx_macros::{FromRow, Type};
 
+// We can't do our normal facade approach with an attribute, but thankfully we can now
+// have docs out-of-line quite easily.
+#[doc = include_str!("macros/test.md")]
+pub use sqlx_macros::test;
+
 #[cfg(feature = "macros")]
 mod macros;
 

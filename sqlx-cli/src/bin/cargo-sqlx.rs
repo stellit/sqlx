@@ -1,6 +1,6 @@
 use clap::Parser;
 use console::style;
-use dotenv::dotenv;
+use dotenvy::dotenv;
 use sqlx_cli::Opt;
 use std::process;
 

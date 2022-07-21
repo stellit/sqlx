@@ -33,7 +33,7 @@ struct Row {
 #[async_std::main]
 #[paw::main]
 async fn main(args: Args) -> anyhow::Result<()> {
-    let pool = PgPool::connect(&dotenv::var("DATABASE_URL")?).await?;
+    let pool = PgPool::connect(&dotenvy::var("DATABASE_URL")?).await?;
 
     match args.cmd {
         Some(Command::Add) => {

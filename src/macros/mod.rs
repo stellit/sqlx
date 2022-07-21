@@ -8,7 +8,7 @@
 /// # #[cfg(all(feature = "mysql", feature = "_rt-async-std"))]
 /// # #[async_std::main]
 /// # async fn main() -> sqlx::Result<()>{
-/// # let db_url = dotenv::var("DATABASE_URL").expect("DATABASE_URL must be set");
+/// # let db_url = dotenvy::var("DATABASE_URL").expect("DATABASE_URL must be set");
 /// #
 /// # if !(db_url.starts_with("mysql") || db_url.starts_with("mariadb")) { return Ok(()) }
 /// # let mut conn = sqlx::MySqlConnection::connect(db_url).await?;
@@ -69,7 +69,7 @@
 /// # #[cfg(all(feature = "mysql", feature = "_rt-async-std"))]
 /// # #[async_std::main]
 /// # async fn main() -> sqlx::Result<()>{
-/// # let db_url = dotenv::var("DATABASE_URL").expect("DATABASE_URL must be set");
+/// # let db_url = dotenvy::var("DATABASE_URL").expect("DATABASE_URL must be set");
 /// #
 /// # if !(db_url.starts_with("mysql") || db_url.starts_with("mariadb")) { return Ok(()) }
 /// # let mut conn = sqlx::mysql::MySqlConnection::connect(db_url).await?;
@@ -354,7 +354,7 @@ macro_rules! query_unchecked (
 /// # #[cfg(all(feature = "mysql", feature = "_rt-async-std"))]
 /// # #[async_std::main]
 /// # async fn main() -> sqlx::Result<()>{
-/// # let db_url = dotenv::var("DATABASE_URL").expect("DATABASE_URL must be set");
+/// # let db_url = dotenvy::var("DATABASE_URL").expect("DATABASE_URL must be set");
 /// #
 /// # if !(db_url.starts_with("mysql") || db_url.starts_with("mariadb")) { return Ok(()) }
 /// # let mut conn = sqlx::MySqlConnection::connect(db_url).await?;
@@ -426,7 +426,7 @@ macro_rules! query_file_unchecked (
 /// # #[cfg(all(feature = "mysql", feature = "_rt-async-std"))]
 /// # #[async_std::main]
 /// # async fn main() -> sqlx::Result<()>{
-/// # let db_url = dotenv::var("DATABASE_URL").expect("DATABASE_URL must be set");
+/// # let db_url = dotenvy::var("DATABASE_URL").expect("DATABASE_URL must be set");
 /// #
 /// # if !(db_url.starts_with("mysql") || db_url.starts_with("mariadb")) { return Ok(()) }
 /// # let mut conn = sqlx::MySqlConnection::connect(db_url).await?;
@@ -567,7 +567,7 @@ macro_rules! query_as (
 /// # #[cfg(all(feature = "mysql", feature = "_rt-async-std"))]
 /// # #[async_std::main]
 /// # async fn main() -> sqlx::Result<()>{
-/// # let db_url = dotenv::var("DATABASE_URL").expect("DATABASE_URL must be set");
+/// # let db_url = dotenvy::var("DATABASE_URL").expect("DATABASE_URL must be set");
 /// #
 /// # if !(db_url.starts_with("mysql") || db_url.starts_with("mariadb")) { return Ok(()) }
 /// # let mut conn = sqlx::MySqlConnection::connect(db_url).await?;

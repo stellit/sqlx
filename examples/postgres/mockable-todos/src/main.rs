@@ -1,5 +1,5 @@
 use async_trait::async_trait;
-use dotenv;
+use dotenvy;
 use sqlx::postgres::PgPool;
 use std::{env, io::Write, sync::Arc};
 use structopt::StructOpt;
@@ -19,7 +19,7 @@ enum Command {
 #[async_std::main]
 #[paw::main]
 async fn main(args: Args) -> anyhow::Result<()> {
-    dotenv::dotenv().ok();
+    dotenvy::dotenv().ok();
     let pool = PgPool::connect(&env::var("DATABASE_URL")?).await?;
     let todo_repo = PostgresTodoRepo::new(pool);
     let mut writer = std::io::stdout();
